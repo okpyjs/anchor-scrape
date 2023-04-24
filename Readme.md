@@ -15,3 +15,20 @@ PAGE TWO: Reports Data Found
 IN TABLE UNDERNEATH
 - Returns the URL of each inner link found
 - Returns the anchor text of each inner link found
+
+
+# How to run
+1. install python
+2. install virtual venv and requirements.txt
+```py
+py -m venv .venv
+.venv\scripts\activate
+pip install -r requirements.txt
+```
+3. run app
+```py
+py app.py
+```
+### using .bat file for windows
+doublick ready.bat <br>
+doublick run.bat
