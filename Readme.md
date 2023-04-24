@@ -1,5 +1,5 @@
-Create Bot to Crawl Websites & Return Information on Internal Links
-Data Extraction Posted Apr 21, 2023
+# Create Bot to Crawl Websites & Return Information on Internal Links
+
 I need a simple bot that crawls websites page source to count and list the incoming “internal links” and “anchor text” to the URL that user inputs.
 
 The deliverable will consist of two pages.
