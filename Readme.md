@@ -33,7 +33,7 @@ py app.py
 http://localhost:5000
 
 ### using .bat file for windows
-doublick ready.bat <br>
-doublick run.bat
+doubleclick ready.bat <br>
+doubleclick run.bat
 - run app
 http://localhost:5000
