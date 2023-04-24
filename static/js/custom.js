@@ -1,7 +1,10 @@
 const allUrl = window.location.href
 const parsedUrl = new URL(allUrl);
 const params = parsedUrl.searchParams;
-const url = params.get("url")
+var url = params.get("url")
+if(url.search("https") == -1) {
+    url = "https://" + url
+}
 
 
 function getRandomColor() {

@@ -18,7 +18,8 @@ def submit():
 @app.route("/scrape", methods=["POST"])
 def scrape():
     url = request.form["url"]
-    print(url)
+    if "https" not in url:
+        url = f"https://{url}"
     try:
         resp_data = ancor.get_ancor(url)
     except:  # noqa
