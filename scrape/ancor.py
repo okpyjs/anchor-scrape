@@ -25,6 +25,8 @@ def get_ancor(url):
 
         if href.startswith(url):
             href = href.replace(url, "")
+            if not href:
+                continue
             if not href[0] == "/":
                 href = "/" + href
 
