@@ -40,11 +40,9 @@ def get_ancor(url):
                 anchor_text_counts[text] += 1
             else:
                 anchor_text_counts[text] = 1
-    print(anchor_text_counts)
     anchor_text_counts = dict(
         sorted(anchor_text_counts.items(), key=lambda item: item[1], reverse=True)
     )
-    print(anchor_text_counts)
 
     # Count the number of internal links that point to the URL provided by the user
     num_internal_links = len(internal_links)

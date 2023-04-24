@@ -25,10 +25,15 @@ py -m venv .venv
 .venv\scripts\activate
 pip install -r requirements.txt
 ```
-3. run app
+3. run server
 ```py
 py app.py
 ```
+4. run app
+http://localhost:5000
+
 ### using .bat file for windows
 doublick ready.bat <br>
 doublick run.bat
+- run app
+http://localhost:5000
