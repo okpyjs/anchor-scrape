@@ -1,26 +1,22 @@
-from flask import Flask, redirect, render_template, request, url_for
+from flask import Flask, render_template, request
 
-from scrape.ancor import Ancor
+from scrape import ancor
 
 app = Flask(__name__)
 
 
 @app.route("/")
 def index():
-    return render_template("index.html", property_info="scraping_data")
+    return render_template("user_entry.html")
 
 
-@app.route("/run", methods=["POST"])
-def scrap():
-    url = request.form.get("url")
-    project = Ancor(url).run()
-    return render_template("index.html", property_info=project)
-    # return redirect(url_for("index"))
+@app.route("/submit", methods=["GET"])
+def submit():
+    url = request.args["url"]
+    resp_data = ancor.get_ancor(url)
+    # Define a route for the Reports Data Found page
+
+    return render_template("reports_data_found.html", data=resp_data)
 
 
-@app.errorhandler(404)
-def not_found(error):
-    return redirect(url_for("index"))
-
-
-app.run(host="0.0.0.0", debug=True)
+app.run(host="0.0.0.0", port=5000, debug=True)
