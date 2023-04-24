@@ -1,3 +1,8 @@
+const allUrl = window.location.href
+const parsedUrl = new URL(allUrl);
+const params = parsedUrl.searchParams;
+const url = params.get("url")
+
 
 function getRandomColor() {
     const r = Math.floor(Math.random() * 256); // generate a random value for the red component (0-255)
@@ -131,10 +136,15 @@ function chart(data){
         config
     );
 
-
     var linksTableBody = '';
     data.links.forEach(function (link) {
-        linksTableBody += '<tr><td><a href="' + link.url + '">' + link.url + '</a></td><td>' + link.anchor_text + '</td></tr>';
+        linksTableBody += `
+            <tr>
+                <td>
+                    <a href="${url + link.url}">${link.url}</a>
+                </td>
+                <td>${link.anchor_text}</td>
+            </tr>`;
     });
     $('#links-table-body').html(linksTableBody);
 }

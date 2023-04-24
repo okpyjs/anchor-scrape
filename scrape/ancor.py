@@ -28,7 +28,12 @@ def get_ancor(url):
             if not href[0] == "/":
                 href = "/" + href
 
-        if href and href.startswith("/") and not text.strip() == "":
+        if (
+            href
+            and href.startswith("/")
+            and not text.strip() == ""
+            and not href.strip() == "/"
+        ):
             internal_links.append({"url": href, "anchor_text": text})
 
             if text in anchor_text_counts:

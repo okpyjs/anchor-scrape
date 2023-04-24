@@ -2,7 +2,7 @@
 {% include "layouts/header.html" %}
                 <div class="text-center mb-4">
                     <i class="fas fa-spinner fa-spin fa-2x"></i>
-                    <p class="lead mt-3">Crawling in progress...</p>
+                    <!-- <p class="lead mt-3"><i class="fas fa-spinner fa-spin"></i></p> -->
                 </div>
                 <div class="d-none" id="results-section">
                     <div class="row">
@@ -39,9 +39,6 @@
 
     <script>
         $(document).ready(function() {
-            const parsedUrl = new URL(window.location.href);
-            const params = parsedUrl.searchParams;
-            const url = params.get("url")
             // let data = JSON.parse('{{data | tojson}}')
             console.log(url)
             $.post(
