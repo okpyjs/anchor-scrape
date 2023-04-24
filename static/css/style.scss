@@ -1,0 +1,14 @@
+.main {
+    position: relative;
+    top: 100px;
+}
+
+
+#liveToast {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    .url-error {
+        background-color: red;
+    }
+}

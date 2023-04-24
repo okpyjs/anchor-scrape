@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<title>User Entry</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-</head>
-<body>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6 offset-md-3 mt-5">
-				<h1 class="text-center mb-4">Internal Links and Anchor Text Counter</h1>
-				<form id="user-entry-form">
+{% include "layouts/header.html" %}
+
+				<form id="user-entry-form" action="/submit", method="GET">
 					<div class="form-group">
 						<label for="url">Enter URL to crawl:</label>
 						<input type="text" class="form-control" id="url" name="url" placeholder="https://www.example.com" required>
@@ -21,18 +11,6 @@
 		</div>
 	</div>
 
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper-base.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
-
-	<script>
-		$(document).ready(function() {
-			$('#user-entry-form').submit(function(event) {
-				event.preventDefault();
-				var url = $('#url').val();
-				window.location.href = '/submit?url=' + encodeURIComponent(url);
-			});
-		});
-	</script>
+{% include "layouts/footer.html" %}
 </body>
 </html>
