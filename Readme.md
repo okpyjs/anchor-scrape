@@ -29,11 +29,11 @@ pip install -r requirements.txt
 ```py
 py app.py
 ```
-4. run app
+4. run app <br>
 http://localhost:5000
 
 ### using .bat file for windows
 doubleclick ready.bat <br>
 doubleclick run.bat
-- run app
+- run app <br>
 http://localhost:5000
